@@ -11,8 +11,10 @@
 }
 body {
   min-height: 100vh;
-  background: url("../images/bg-pattern-top.svg") 130% 950% no-repeat,
-    url("../images/bg-pattern-bottom.svg") -50% -880% no-repeat;
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-position: top -500px left -620px, bottom -500px right -620px;
+  background-repeat: no-repeat;
   background-color: var(--Dark-cyan);
   color: var(--Very-dark-desaturated-blue);
   font-family: "Kumbh Sans", sans-serif;
@@ -82,8 +84,6 @@ ul li span {
     font-size: 1.3rem;
   }
   body {
-    background: url("../images/bg-pattern-top.svg") -70% 950% no-repeat,
-      url("../images/bg-pattern-bottom.svg") 150% -980% no-repeat;
     background-color: var(--Dark-cyan);
     grid-template-columns: 1fr 1fr 1fr;
   }
