@@ -1,0 +1,100 @@
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-gray: hsl(0, 8%, 90%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: url("../images/bg-pattern-top.svg") 130% 950% no-repeat,
+    url("../images/bg-pattern-bottom.svg") -50% -880% no-repeat;
+  background-color: var(--Dark-cyan);
+  color: var(--Very-dark-desaturated-blue);
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+  display: grid;
+  place-content: center;
+}
+span,
+.header .bottom p {
+  color: var(--Dark-grayish-blue);
+  font-weight: 400;
+}
+main {
+  background-color: #fff;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+main .header {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  position: relative;
+  border-bottom: 1px solid var(--Dark-gray);
+}
+.header img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+.header .top {
+  grid-row: 1/2;
+  background-image: url("../images/bg-pattern-card.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header .bottom {
+  grid-row: 2/-1;
+  padding: 4rem 6rem 2rem 6rem;
+}
+.header .bottom h1 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+.header .bottom p {
+  font-size: 0.9rem;
+}
+ul {
+  list-style-type: none;
+  padding: 2rem;
+}
+ul li {
+  display: inline-block;
+  max-width: 70px;
+  font-weight: 700;
+  margin: 0 0.5rem;
+}
+ul li span {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 1.3rem;
+  }
+  body {
+    background: url("../images/bg-pattern-top.svg") -70% 950% no-repeat,
+      url("../images/bg-pattern-bottom.svg") 150% -980% no-repeat;
+    background-color: var(--Dark-cyan);
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  main {
+    grid-column: 2/3;
+  }
+  .header img {
+    width: 130px;
+  }
+  ul li {
+    max-width: 90px;
+    font-size: 1.2rem;
+  }
+}
